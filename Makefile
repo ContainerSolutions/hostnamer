@@ -22,3 +22,7 @@ clean:
 	@go clean
 	@rm -fv dist/*
 	@-docker rmi $(docker-container) 2>/dev/null
+
+deploy:
+	docker push $(docker-container)
+
